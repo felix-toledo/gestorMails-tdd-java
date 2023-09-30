@@ -1,26 +1,25 @@
 package GestorCorreo;
 
-public class User {
-    private String name;
-    private String surname;
-    private String mailAdress;
+import java.util.ArrayList;
+
+public class User extends SuperPerson{
+
+    private ArrayList<Contact> contactList = new ArrayList<>();
+    private Box inbox = new Box();
+    private Box outbox = new Box();
 
     public User(String name, String surname, String mailAdress){
-        this.name = name;
-        this.surname = surname;
-        this.mailAdress = mailAdress + "@femail.ctes";
+        super(name, surname, mailAdress);
     }
 
-
-    public String getName() {
-        return name;
+    public Contact addNewContact(String name, String surname, String mailAdress){
+        Contact newContact = new Contact(name, surname, mailAdress);
+        contactList.add(newContact);
+        return newContact;
     }
 
-    public String getSurname() {
-        return surname;
+    public ArrayList<Contact> getContactList(){
+        return contactList;
     }
 
-    public String getMailAdress(){
-        return mailAdress;
-    }
 }

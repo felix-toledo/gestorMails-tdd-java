@@ -27,5 +27,12 @@ public class UserTest {
         assertEquals(felixtoledo, femailcom.getApp().getUserList().get(0));
     }
 
+    @Test
+    public void create_new_user_and_give_it_a_personalized_mail_adress(){
+        App femailcom = new App();
+        User felixtoledo = femailcom.createNewUser("Felix", "Toledo", "felixtoledoctes@gmail.com");
+        assertEquals("felixtoledoctes@gmail.com", femailcom.getApp().getUserList().get(0).getMailAdress());
+    }
+
 
 }
