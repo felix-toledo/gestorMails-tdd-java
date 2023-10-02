@@ -4,24 +4,17 @@ import GestorCorreo.Interfaces.IAdressable;
 import GestorCorreo.Interfaces.INameable;
 import GestorCorreo.Interfaces.ISurnameable;
 
-public class SuperPerson implements IAdressable,
-                                    ISurnameable,
-                                    INameable {
+public class Person implements  IAdressable,
+                                ISurnameable,
+                                INameable {
     private String name;
     private String surname;
     private String mailAdress;
 
-    public SuperPerson(String name, String surname, String mailAdress){
+    public Person(String name, String surname, String mailAdress){
         this.name = name;
         this.surname = surname;
-        if(mailAdress.contains("@")){
-            this.mailAdress = mailAdress;
-        } else {
-            this.mailAdress = mailAdress + "@femail.ctes";
-        }
-    }
-
-    public SuperPerson() {
+        this.setMailAdress(mailAdress);
     }
 
     public Void setName(String name) {
@@ -35,7 +28,11 @@ public class SuperPerson implements IAdressable,
     }
 
     public Void setMailAdress(String mailAdress) {
-        this.mailAdress = mailAdress;
+        if(mailAdress.contains("@")){
+            this.mailAdress = mailAdress;
+        } else {
+            this.mailAdress = mailAdress + "@femail.ctes";
+        }
         return null;
     }
 

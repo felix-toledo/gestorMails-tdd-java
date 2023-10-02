@@ -1,15 +1,23 @@
 package GestorCorreo;
 
+import GestorCorreo.Interfaces.IAdressable;
+import GestorCorreo.Interfaces.INameable;
+import GestorCorreo.Interfaces.ISurnameable;
+
 import java.util.ArrayList;
 
-public class User extends SuperPerson{
+public class User implements INameable, ISurnameable, IAdressable {
 
     private ArrayList<Contact> contactList = new ArrayList<>();
     private Box inbox = new Box();
     private Box outbox = new Box();
 
+    private Person persona = new Person("", "", "");
+
     public User(String name, String surname, String mailAdress){
-        super(name, surname, mailAdress);
+        persona.setName(name);
+        persona.setSurname(surname);
+        persona.setMailAdress(mailAdress);
     }
 
     public Contact addNewContact(String name, String surname, String mailAdress){
@@ -22,4 +30,30 @@ public class User extends SuperPerson{
         return contactList;
     }
 
+    public Void setMailAdress(String mailAdress) {
+        persona.setMailAdress(mailAdress);
+        return null;
+    }
+
+    public String getMailAdress() {
+        return persona.getMailAdress();
+    }
+
+    public Void setName(String name) {
+        persona.setName(name);
+        return null;
+    }
+
+    public String getName() {
+        return persona.getName();
+    }
+
+    public Void setSurname(String surname) {
+        persona.setSurname(surname);
+        return null;
+    }
+
+    public String getSurname() {
+        return persona.getSurname();
+    }
 }
