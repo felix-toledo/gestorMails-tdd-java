@@ -1,5 +1,7 @@
 Desarrollo TDD: El sistema debe ser desarrollado siguiendo la metodología de Desarrollo Dirigido por Pruebas (TDD).
 
+[![Java CI with Maven](https://github.com/felix-toledo/gestorMails-tdd-java/actions/workflows/maven.yml/badge.svg)](https://github.com/felix-toledo/gestorMails-tdd-java/actions/workflows/maven.yml)
+
 #Un usuario debe poder crear un correo electrónico.
 []Los correos electrónicos deben tener las siguientes propiedades: Asunto, Contenido, Remitente (un solo contacto) y Para (múltiples contactos).
 
