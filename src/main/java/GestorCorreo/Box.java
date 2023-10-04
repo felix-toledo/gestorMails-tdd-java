@@ -14,4 +14,8 @@ public class Box {
     public void add(Mail mail) {
         mails.add(mail);
     }
+
+    public Mail get(int index){
+        return mails.get(index);
+    }
 }

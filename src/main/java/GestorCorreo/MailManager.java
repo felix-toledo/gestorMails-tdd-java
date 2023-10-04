@@ -9,22 +9,36 @@ public class MailManager {
     public MailManager() {
     }
 
+    public void sendMessages(User from, Mail mail){
+        ArrayList<String> mailDirections = mail.getPara();
+        List<User> matchingUsers = findUsersByMails(mailDirections);
+        from.addMailToOutbox(mail);
+
+        for (User user : matchingUsers){
+            user.addMailToInbox(mail);
+        }
+    }
+
+    private List<User> findUsersByMails(ArrayList<String> mails) {
+        List<User> matchingUsers = userList.stream()
+                .filter(user -> mails.stream()
+                        .anyMatch(mail -> user.getMailAdress().equals(mail)))
+                .collect(Collectors.toList());
+
+        return matchingUsers;
+    }
+
     public void addUserToList(User newUser) {
         userList.add(newUser);
     }
-
-    public void sendMessages(User from, Mail mail){
-        List<User> matchingUsers = userList.stream()
-                .filter(user -> user.getMailAdress().equals(mail.getPara().get(0)))
-                .collect(Collectors.toList());
-        Mail cloneMail = new Mail(mail.getAsunto(), mail.getMensaje(), mail.getPara());
-        User receptor = matchingUsers.get(0);
-        receptor.addMailToInbox(cloneMail);
-        from.addMailToOutbox(mail);
+    public User createNewUser(String name, String surname, String mailAdress){
+        User user = new User(name, surname, mailAdress);
+        addUserToList(user);
+        return user;
     }
-    //TEST PURPOSE
+
+    //Test purpose
     public ArrayList<User> getUserList() {
         return userList;
     }
-
 }

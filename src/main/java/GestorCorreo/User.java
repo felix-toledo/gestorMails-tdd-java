@@ -57,13 +57,14 @@ public class User implements INameable, ISurnameable, IAdressable {
         return persona.getSurname();
     }
 
-    public void createMessage(App aplicacion, String asunto, String mensaje, ArrayList<String> para) {
+    public void createMessage(MailManager aplicacion, String asunto, String mensaje, ArrayList<String> para) {
         Mail mail = new Mail(asunto, mensaje, para);
-        aplicacion.getApp().sendMessages(this, mail);
+        aplicacion.sendMessages(this, mail);
     }
 
     public void addMailToInbox(Mail mail){
-        inbox.add(mail);
+        Mail newMail = new Mail(mail.getAsunto(), mail.getMensaje(), mail.getPara());
+        inbox.add(newMail);
     }
 
     public void addMailToOutbox(Mail mail){
