@@ -79,9 +79,8 @@ public class User implements INameable, ISurnameable, IAdressable {
         return persona.getMailAdress();
     }
 
-    public Void setName(String name) {
+    public void setName(String name) {
         persona.setName(name);
-        return null;
     }
 
     public String getName() {

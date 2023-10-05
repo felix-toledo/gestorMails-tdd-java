@@ -6,6 +6,10 @@ import java.util.stream.Collectors;
 
 public class MessageFilter extends Filter {
 
+        public MessageFilter(){
+                super.setName("Filtro de Mensaje");
+        }
+        
      @Override
      protected ArrayList<Mail> searchString(String toSearch, Box box) {
           ArrayList<Mail> mails = box.getAll().stream()

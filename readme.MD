@@ -18,18 +18,17 @@ Este proyecto es un Gestor de Correos Electrónicos desarrollado siguiendo la me
 - [ ] Un "Contacto" es un objeto que contiene información de Nombre de la persona y Email de dicha persona. Se utiliza para especificar el remitente o los destinatarios en el campo "Para".
 
 ### Filtros
-- [ ] Los usuarios deben poder crear filtros para organizar sus correos electrónicos.
-- [ ] Los filtros son carpetas que no contienen correos, sino que filtran correos en base a elementos del email, como parte del asunto, parte del contenido, remitente o destinatarios en el campo "Para".
-- [ ] Los filtros deben tener un nombre descriptivo, como "Correos de la UCP".
-- [ ] Los filtros deben ser capaces de buscar correos que hayan sido enviados por un email con un dominio específico, como "@ucp.edu.ar".
+- [X] Los usuarios deben poder crear filtros para organizar sus correos electrónicos.
+- [X] Los filtros son carpetas que no contienen correos, sino que filtran correos en base a elementos del email, como parte del asunto, parte del contenido, remitente o destinatarios en el campo "Para".
+- [X] Los filtros deben tener un nombre descriptivo, como "Correos de la UCP".
 - [ ] La aplicación debe ser capaz de gestionar al menos 5 filtros.
 - [ ] De estos 5 filtros, al menos 2 o 3 de ellos deben ser complejos, es decir, deben poder buscar correos en función de 2 o más campos simultáneamente (por ejemplo, asunto y remitente).
 
 ### Búsqueda de Correos
-- [ ] Los usuarios pueden buscar correos en una bandeja.
-- [ ] Busqueda sobre asunto.
-- [ ] Busqueda sobre remitente.
-- [ ] Busqueda sobre mensaje.
+- [X] Los usuarios pueden buscar correos en una bandeja.
+- [X] Busqueda sobre asunto.
+- [X] Busqueda sobre remitente.
+- [X] Busqueda sobre mensaje.
 - [ ] Busqueda sobre asunto + mensaje.
 - [ ] Busqueda sobre asunto + remitente.
 

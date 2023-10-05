@@ -1,8 +1,10 @@
 package GestorCorreo.Filters;
 import java.util.ArrayList;
 import GestorCorreo.*;
+import GestorCorreo.Interfaces.INameable;
 
-public class Filter {
+public class Filter implements INameable{
+     private String name = "";
 
      protected ArrayList<Mail> searchString(String toSearch, Box box){
           return null;
@@ -17,5 +19,13 @@ public class Filter {
      public ArrayList<Mail> filter(String toSearch, Box box){
           ArrayList<Mail> mails = searchString(toSearch, box);
           return mails;
+     }
+
+     public void setName(String name){
+          this.name = name;
+     }
+
+     public String getName(){
+          return name;
      }
 }

@@ -17,9 +17,8 @@ public class Person implements  IAdressable,
         this.setMailAdress(mailAdress);
     }
 
-    public Void setName(String name) {
+    public void setName(String name) {
         this.name = name;
-        return null;
     }
 
     public Void setSurname(String surname) {

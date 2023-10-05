@@ -22,9 +22,8 @@ public class Contact implements IAdressable, INameable, ISurnameable {
         return persona.getMailAdress();
     }
 
-    public Void setName(String name) {
+    public void setName(String name) {
         persona.setName(name);
-        return null;
     }
 
     public String getName() {

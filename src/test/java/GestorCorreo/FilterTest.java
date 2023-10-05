@@ -58,4 +58,20 @@ public class FilterTest {
      public void filter_from_title_and_message(){
           
      }
+
+     @Test
+     public void name_of_filters(){
+          FromFilter filtroRemitente = new FromFilter();
+          MessageFilter filtroMensaje = new MessageFilter();
+          TitleFilter filtroAsunto = new TitleFilter();
+
+          String nombreFiltroRemitente = filtroRemitente.getName();
+          String nombreFiltroMensaje = filtroMensaje.getName();
+          String nombreFiltroAsunto = filtroAsunto.getName();
+
+          assertEquals("Filtro de Remitente", nombreFiltroRemitente);
+          assertEquals("Filtro de Mensaje", nombreFiltroMensaje);
+          assertEquals("Filtro de Asunto", nombreFiltroAsunto);
+
+     }
 }

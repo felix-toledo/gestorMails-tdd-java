@@ -6,6 +6,11 @@ import java.util.stream.Collectors;
 
 public class TitleFilter extends Filter {
 
+     
+     public TitleFilter(){
+          super.setName("Filtro de Asunto");
+     }
+
      @Override
      protected ArrayList<Mail> searchString(String toSearch, Box box) {
           ArrayList<Mail> mails = box.getAll().stream()

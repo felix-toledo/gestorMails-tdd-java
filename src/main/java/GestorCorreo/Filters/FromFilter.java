@@ -6,6 +6,9 @@ import java.util.stream.Collectors;
 
 public class FromFilter extends Filter {
 
+        public FromFilter(){
+                super.setName("Filtro de Remitente");
+        }
      @Override
      protected ArrayList<Mail> searchString(String toSearch, Box box) {
           ArrayList<Mail> mails = box.getAll().stream()
