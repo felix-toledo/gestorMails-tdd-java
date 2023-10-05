@@ -1,11 +1,10 @@
 package GestorCorreo;
 
 import org.junit.Test;
-import org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import java.util.ArrayList;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 public class SendMailsTest {
 @Test
     public void create_app_create_user_send_mail(){

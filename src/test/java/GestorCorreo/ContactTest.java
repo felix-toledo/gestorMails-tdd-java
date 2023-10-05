@@ -1,7 +1,7 @@
 package GestorCorreo;
 
 import org.junit.Test;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
 public class ContactTest {
     @Test
