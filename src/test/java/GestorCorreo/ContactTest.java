@@ -3,9 +3,6 @@ package GestorCorreo;
 import org.junit.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
 public class ContactTest {
     @Test
     public void check_creation_of_contact(){
