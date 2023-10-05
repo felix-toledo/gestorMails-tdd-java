@@ -1,5 +1,6 @@
 package GestorCorreo;
 
+import GestorCorreo.Filters.*;
 import GestorCorreo.Interfaces.IAdressable;
 import GestorCorreo.Interfaces.INameable;
 import GestorCorreo.Interfaces.ISurnameable;
@@ -30,6 +31,45 @@ public class User implements INameable, ISurnameable, IAdressable {
         return contactList;
     }
 
+    public ArrayList<String> getAllContactMails(){
+        ArrayList<String> mails = new ArrayList<>();
+
+        for(Contact contact : contactList){
+            mails.add(contact.getMailAdress());
+        }
+
+        return mails;
+    }
+
+    public void createMessage(MailManager aplicacion, String asunto, String mensaje, String para) {
+        ArrayList<String> listPara = new ArrayList<>();
+        listPara.add(para);
+
+        createMessage(aplicacion, asunto, mensaje, listPara);
+    }
+    public void createMessage(MailManager aplicacion, String asunto, String mensaje, ArrayList<String> para) {
+        Mail mail = new Mail(asunto, mensaje, this.getMailAdress(), para);
+        aplicacion.sendMessages(this, mail);
+    }
+
+    public ArrayList<Mail> filterOutbox(String toSearch, Filter filterType){
+        ArrayList<Mail> finded = filterType.filter(toSearch, outbox);
+        return finded;
+    }
+    public ArrayList<Mail> filterInbox(String toSearch, Filter filterType){
+        ArrayList<Mail> finded = filterType.filter(toSearch, inbox);
+        return finded;
+    }
+
+    public void addMailToInbox(Mail mail){
+        Mail newMail = new Mail(mail.getTitle(), mail.getMessage(), mail.getFrom(), mail.getTo());
+        inbox.add(newMail);
+    }
+
+    public void addMailToOutbox(Mail mail){
+        outbox.add(mail);
+    }
+
     public Void setMailAdress(String mailAdress) {
         persona.setMailAdress(mailAdress);
         return null;
@@ -55,20 +95,6 @@ public class User implements INameable, ISurnameable, IAdressable {
 
     public String getSurname() {
         return persona.getSurname();
-    }
-
-    public void createMessage(MailManager aplicacion, String asunto, String mensaje, ArrayList<String> para) {
-        Mail mail = new Mail(asunto, mensaje, para);
-        aplicacion.sendMessages(this, mail);
-    }
-
-    public void addMailToInbox(Mail mail){
-        Mail newMail = new Mail(mail.getAsunto(), mail.getMensaje(), mail.getPara());
-        inbox.add(newMail);
-    }
-
-    public void addMailToOutbox(Mail mail){
-        outbox.add(mail);
     }
 
     public Box getOutbox() {

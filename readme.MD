@@ -26,8 +26,12 @@ Este proyecto es un Gestor de Correos Electrónicos desarrollado siguiendo la me
 - [ ] De estos 5 filtros, al menos 2 o 3 de ellos deben ser complejos, es decir, deben poder buscar correos en función de 2 o más campos simultáneamente (por ejemplo, asunto y remitente).
 
 ### Búsqueda de Correos
-- [ ] Los usuarios pueden buscar correos en la bandeja de entrada.
-- [ ] La búsqueda debe permitir buscar correos por texto en cualquiera de los campos de los correos electrónicos, como asunto, contenido, remitente o destinatarios en el campo "Para".
+- [ ] Los usuarios pueden buscar correos en una bandeja.
+- [ ] Busqueda sobre asunto.
+- [ ] Busqueda sobre remitente.
+- [ ] Busqueda sobre mensaje.
+- [ ] Busqueda sobre asunto + mensaje.
+- [ ] Busqueda sobre asunto + remitente.
 
 ### Creación de Usuario
 - [X] La aplicación debe permitir que los usuarios se registren y creen cuentas de usuario.

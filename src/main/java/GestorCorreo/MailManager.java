@@ -10,7 +10,7 @@ public class MailManager {
     }
 
     public void sendMessages(User from, Mail mail){
-        ArrayList<String> mailDirections = mail.getPara();
+        ArrayList<String> mailDirections = mail.getTo();
         List<User> matchingUsers = findUsersByMails(mailDirections);
         from.addMailToOutbox(mail);
 
@@ -31,6 +31,7 @@ public class MailManager {
     public void addUserToList(User newUser) {
         userList.add(newUser);
     }
+    
     public User createNewUser(String name, String surname, String mailAdress){
         User user = new User(name, surname, mailAdress);
         addUserToList(user);

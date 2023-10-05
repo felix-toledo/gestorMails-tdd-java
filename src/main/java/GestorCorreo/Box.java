@@ -18,4 +18,8 @@ public class Box {
     public Mail get(int index){
         return mails.get(index);
     }
+
+    public ArrayList<Mail> getAll(){
+        return mails;
+    }
 }

@@ -4,25 +4,32 @@ import java.util.ArrayList;
 
 public class Mail {
 
-    private String asunto;
-    private String mensaje;
-    private ArrayList<String> para = new ArrayList<>();
+    private String title;
+    private String message;
+    private String from;
+    private ArrayList<String> to = new ArrayList<>();
+    
 
-    public Mail(String asunto, String mensaje, ArrayList<String> para){
-        this.asunto = asunto;
-        this.mensaje = mensaje;
-        this.para = para;
+    public Mail(String title, String message,  String from, ArrayList<String> to){
+        this.title = title;
+        this.message = message;
+        this.from = from;
+        this.to = to;
     }
 
-    public String getAsunto() {
-        return asunto;
+    public String getTitle() {
+        return title;
     }
 
-    public ArrayList<String> getPara() {
-        return para;
+    public ArrayList<String> getTo() {
+        return to;
     }
 
-    public String getMensaje() {
-        return mensaje;
+    public String getMessage() {
+        return message;
+    }
+
+    public String getFrom(){
+        return from;
     }
 }
