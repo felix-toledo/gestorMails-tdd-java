@@ -34,16 +34,3 @@ Este proyecto es un Gestor de Correos Electrónicos desarrollado siguiendo la me
 - [X] Para crear un usuario, se deben recopilar y almacenar información básica, como nombre, apellido y dirección de correo electrónico.
 - [X] Cada usuario debe tener su propio espacio de trabajo y bandeja de entrada privada para gestionar sus correos electrónicos y filtros personalizados.
 
-## Cobertura de Código
-
-La cobertura de código se mide utilizando la herramienta Coveralls. Puedes ver el estado actual de la cobertura de código en el badge de abajo:
-
-[![Coverage Status](https://coveralls.io/repos/github/felix-toledo/gestorMails-tdd-java/badge.svg?branch=main)](https://coveralls.io/github/felix-toledo/gestorMails-tdd-java?branch=main)
-
-## Contribuir
-
-Si deseas contribuir a este proyecto, por favor consulta el archivo [CONTRIBUTING.md](CONTRIBUTING.md) para obtener más información sobre cómo participar en el desarrollo.
-
-## Licencia
-
-Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para obtener más detalles.
