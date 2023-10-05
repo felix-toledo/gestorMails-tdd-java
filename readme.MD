@@ -15,7 +15,7 @@ Este proyecto es un Gestor de Correos Electrónicos desarrollado siguiendo la me
 - [X] Cuando un usuario envía un correo, este debe ser almacenado en la Bandeja de Enviados del emisor y la de recibidos del remitente.
 
 ### Gestión de Contactos
-- [ ] Un "Contacto" es un objeto que contiene información de Nombre de la persona y Email de dicha persona. Se utiliza para especificar el remitente o los destinatarios en el campo "Para".
+- [X] Un "Contacto" es un objeto que contiene información de Nombre de la persona y Email de dicha persona. Se utiliza para especificar el remitente o los destinatarios en el campo "Para".
 
 ### Filtros
 - [X] Los usuarios deben poder crear filtros para organizar sus correos electrónicos.
