@@ -14,7 +14,7 @@ public class TitleFromFilter extends Filter {
      public ArrayList<Mail> filter(String toSearchTitle, String toSearchAnother, Box box){
           TitleFilter titleFilter = new TitleFilter();
           FromFilter fromFilter = new FromFilter();
-          
+
           ArrayList<Mail> titleResults = titleFilter.filter(toSearchTitle, box);
           ArrayList<Mail> fromResults = fromFilter.filter(toSearchAnother, box);
 

@@ -8,8 +8,8 @@ public class UserTest {
     public void create_new_user_with_name_surname_mailAdress(){
         User felixtoledo = new User("Felix", "Toledo", "felixtoledoctes");
 
-        String nameOfFelix = felixtoledo.getMailAdress();
-        String surnameOfFelix = felixtoledo.getMailAdress();
+        String nameOfFelix = felixtoledo.getName();
+        String surnameOfFelix = felixtoledo.getSurname();
         String mailOfFelix = felixtoledo.getMailAdress();
 
         assertEquals("Felix", nameOfFelix);
