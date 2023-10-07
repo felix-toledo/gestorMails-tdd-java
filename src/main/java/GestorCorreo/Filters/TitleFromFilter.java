@@ -1,7 +1,6 @@
 package GestorCorreo.Filters;
 
 import java.util.ArrayList;
-import java.util.stream.Collectors;
 
 import GestorCorreo.*;
 
