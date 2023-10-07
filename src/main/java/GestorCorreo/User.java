@@ -56,8 +56,16 @@ public class User implements INameable, ISurnameable, IAdressable {
         ArrayList<Mail> finded = filterType.filter(toSearch, outbox);
         return finded;
     }
+    public ArrayList<Mail> filterOutbox(String searchTitle, String searchOther, Filter filterType){
+        ArrayList<Mail> finded = filterType.filter(searchTitle, searchOther, outbox);
+        return finded;
+    }
     public ArrayList<Mail> filterInbox(String toSearch, Filter filterType){
         ArrayList<Mail> finded = filterType.filter(toSearch, inbox);
+        return finded;
+    }
+    public ArrayList<Mail> filterInbox(String searchTitle, String searchOther, Filter filterType){
+        ArrayList<Mail> finded = filterType.filter(searchTitle, searchOther, inbox);
         return finded;
     }
 

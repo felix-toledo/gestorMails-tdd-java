@@ -51,7 +51,12 @@ public class FilterTest {
 
      @Test
      public void filter_from_title_and_from(){
-          
+          felix.createMessage(app, "hola", "mjito", "rodrigo@gmail.com");
+          felix.createMessage(app, "chau", "mjito", "rodrigo@gmail.com");
+          grace.createMessage(app, "hola", "mjito", "rodrigo@gmail.com");
+
+          TitleFromFilter filtro = new TitleFromFilter();
+          ArrayList<Mail> resultado = rodrigo.filterInbox("hola", filtro);
      }
 
      @Test
