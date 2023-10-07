@@ -12,5 +12,19 @@ public class ContactTest {
         assertEquals("felix@gmail.com", contacto.getMailAdress());
     }
 
+    @Test
+    public void contact_functions_test(){
+        Contact contacto = new Contact("Felix", "Toledo", "felix@gmail.com");
+        contacto.setName("Felixito");
+        contacto.setSurname("Perez");
+        contacto.setMailAdress("felixperez@gmail.com");
 
+        String hasToBeName = "Felixito";
+        String hasToBeSurname = "Perez";
+        String hasToBeMailAdress = "felixperez@gmail.com";
+
+        assertEquals(hasToBeName, contacto.getName());
+        assertEquals(hasToBeSurname, contacto.getSurname());
+        assertEquals(hasToBeMailAdress, contacto.getMailAdress());
+    }
 }
