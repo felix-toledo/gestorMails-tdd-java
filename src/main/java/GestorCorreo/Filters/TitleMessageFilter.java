@@ -5,21 +5,21 @@ import java.util.stream.Collectors;
 
 import GestorCorreo.*;
 
-public class TitleFromFilter extends Filter {
-     public TitleFromFilter(){
+public class TitleMessageFilter extends Filter {
+     public TitleMessageFilter(){
           super.setName("Filtro de Asunto y Remitente");
      }
 
      @Override
      public ArrayList<Mail> filter(String toSearchTitle, String toSearchAnother, Box box){
           TitleFilter titleFilter = new TitleFilter();
-          FromFilter fromFilter = new FromFilter();
+          MessageFilter messageFilter = new MessageFilter();
           
           ArrayList<Mail> titleResults = titleFilter.filter(toSearchTitle, box);
-          ArrayList<Mail> fromResults = fromFilter.filter(toSearchAnother, box);
+          ArrayList<Mail> messageResults = messageFilter.filter(toSearchAnother, box);
 
           ArrayList<Mail> result = new ArrayList<>(titleResults);
-          result.retainAll(fromResults);
+          result.retainAll(messageResults);
 
           return result;
      }

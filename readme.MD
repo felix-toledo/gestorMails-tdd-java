@@ -29,8 +29,8 @@ Este proyecto es un Gestor de Correos Electrónicos desarrollado siguiendo la me
 - [X] Busqueda sobre asunto.
 - [X] Busqueda sobre remitente.
 - [X] Busqueda sobre mensaje.
-- [ ] Busqueda sobre asunto + mensaje.
-- [ ] Busqueda sobre asunto + remitente.
+- [X] Busqueda sobre asunto + mensaje.
+- [X] Busqueda sobre asunto + remitente.
 
 ### Creación de Usuario
 - [X] La aplicación debe permitir que los usuarios se registren y creen cuentas de usuario.

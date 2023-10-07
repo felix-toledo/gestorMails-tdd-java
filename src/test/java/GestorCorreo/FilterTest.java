@@ -52,16 +52,25 @@ public class FilterTest {
      @Test
      public void filter_from_title_and_from(){
           felix.createMessage(app, "hola", "mjito", "rodrigo@gmail.com");
+          felix.createMessage(app, "hola mi hermano", "quiero que hablemos", "rodrigo@gmail.com");
           felix.createMessage(app, "chau", "mjito", "rodrigo@gmail.com");
           grace.createMessage(app, "hola", "mjito", "rodrigo@gmail.com");
 
           TitleFromFilter filtro = new TitleFromFilter();
-          ArrayList<Mail> resultado = rodrigo.filterInbox("hola", filtro);
+          ArrayList<Mail> resultado = rodrigo.filterInbox("hola", "felix", filtro);
+          assertEquals(2, resultado.size());
      }
 
      @Test
      public void filter_from_title_and_message(){
-          
+          felix.createMessage(app, "hola", "mi hermano", "rodrigo@gmail.com");
+          felix.createMessage(app, "este no", "mi hermano", "rodrigo@gmail.com");
+          felix.createMessage(app, "chau", "este no busco", "rodrigo@gmail.com");
+          grace.createMessage(app, "hola", "hermano, como estas?", "rodrigo@gmail.com");
+
+          TitleMessageFilter filtro = new TitleMessageFilter();
+          ArrayList<Mail> resultado = rodrigo.filterInbox("hola", "hermano", filtro);
+          assertEquals(2, resultado.size());
      }
 
      @Test
