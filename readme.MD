@@ -21,8 +21,8 @@ Este proyecto es un Gestor de Correos Electrónicos desarrollado siguiendo la me
 - [X] Los usuarios deben poder crear filtros para organizar sus correos electrónicos.
 - [X] Los filtros son carpetas que no contienen correos, sino que filtran correos en base a elementos del email, como parte del asunto, parte del contenido, remitente o destinatarios en el campo "Para".
 - [X] Los filtros deben tener un nombre descriptivo, como "Correos de la UCP".
-- [ ] La aplicación debe ser capaz de gestionar al menos 5 filtros.
-- [ ] De estos 5 filtros, al menos 2 o 3 de ellos deben ser complejos, es decir, deben poder buscar correos en función de 2 o más campos simultáneamente (por ejemplo, asunto y remitente).
+- [X] La aplicación debe ser capaz de gestionar al menos 5 filtros.
+- [X] De estos 5 filtros, al menos 2 o 3 de ellos deben ser complejos, es decir, deben poder buscar correos en función de 2 o más campos simultáneamente (por ejemplo, asunto y remitente).
 
 ### Búsqueda de Correos
 - [X] Los usuarios pueden buscar correos en una bandeja.
