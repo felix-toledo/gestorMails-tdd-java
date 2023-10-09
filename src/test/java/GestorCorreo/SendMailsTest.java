@@ -36,4 +36,23 @@ public class SendMailsTest {
         int bandejaFelix = felix.getOutbox().size();
         assertEquals(0, bandejaFelix);
     }
+
+    @Test
+    public void a_lot_of_mails_to_a_user(){
+        ArrayList<String> para = new ArrayList<>();
+        for (int i = 0; i <= 99; i++) {
+            aplicacion.createNewUser("Name" + i, "Surname"+i, "correo"+i);
+            para.add("correo"+i+"@femail.ctes");
+        }
+        felix.createMessage(aplicacion, "Holatp2", "Como estas", para);
+        int bandejaSalidaFelix = felix.getOutbox().size();
+
+        assertEquals(100, para.size());
+        assertEquals(1, bandejaSalidaFelix);
+        assertEquals("Holatp2", felix.getOutbox().get(0).getTitle());
+        for (int i = 4; i <= 102; i++) {
+            assertEquals(1, aplicacion.getUserList().get(i).getInbox().size());
+            assertEquals("Holatp2", aplicacion.getUserList().get(i).getInbox().get(0).getTitle());
+        }
+    }
 }
