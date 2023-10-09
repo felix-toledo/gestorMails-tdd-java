@@ -25,6 +25,10 @@ public class MailManager {
                         .anyMatch(mail -> user.getMailAdress().equals(mail)))
                 .collect(Collectors.toList());
 
+        if(matchingUsers.size() == 0){
+            throw new IllegalAccessError();
+        }
+
         return matchingUsers;
     }
 

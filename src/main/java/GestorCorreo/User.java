@@ -42,10 +42,13 @@ public class User implements INameable, ISurnameable, IAdressable {
     }
 
     public void createMessage(MailManager aplicacion, String asunto, String mensaje, String para) {
-        ArrayList<String> listPara = new ArrayList<>();
-        listPara.add(para);
-
-        createMessage(aplicacion, asunto, mensaje, listPara);
+        if (para.contains("@")){
+            ArrayList<String> listPara = new ArrayList<>();
+            listPara.add(para);
+            createMessage(aplicacion, asunto, mensaje, listPara);
+        } else {
+            throw new IllegalArgumentException("Su mail no es válido");
+        }
     }
     public void createMessage(MailManager aplicacion, String asunto, String mensaje, ArrayList<String> para) {
         Mail mail = new Mail(asunto, mensaje, this.getMailAdress(), para);
